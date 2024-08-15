@@ -1,4 +1,4 @@
-let menu = [
+let pizza = [
     {
         "name": "Leonardo",
         "ingredients": "Leckere Deepdish Pizza! Mit Bananen und Würstechen. Auch vegan erhältlich!",
@@ -23,3 +23,22 @@ let menu = [
         "price": 15.50,
     }
 ];
+
+let cacke = [
+    {
+        "name": "Blossmom Cupckacke",
+        "ingredients": "Mit Orangenmarmalede gefüllter Cupckacke Überzogen mit Orangenem Zuckerguss Bestreut mit Schockoperlen",
+        "price": 5.00,
+    },
+
+    {
+        "name": "Bubbles Cupckacke",
+        "ingredients": "Überzogen mit blauem Zuckerguss gefüllt mit flüssigem Vanille Kern mit Knusperperlen",
+        "price": 5.50,
+    },
+
+    {
+        "name": "Buttercup Cupckacke",
+        "ingredients": "Dunnkle Schokolade gefüllt mit Erdnussbutter",
+    }
+]

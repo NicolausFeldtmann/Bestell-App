@@ -93,6 +93,12 @@ nav{
     align-items: center;
 }
 
+.dishImg{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
 .content{
     display: flex;
     flex-wrap: wrap;

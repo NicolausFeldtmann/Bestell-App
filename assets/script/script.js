@@ -29,10 +29,21 @@ function includeHTML() {
   function renderMenuEntrys() {
     let contentRef = document.getElementById('pizzaContent');
     contentRef.innerHTML = "";
-    for (let i = 0; i < menu.length; i++) {
-        let name = menu[i].name;
-        let ingredients = menu[i].ingredients;
-        let price = menu[i].price;
+    for (let i = 0; i < pizza.length; i++) {
+        let name = pizza[i].name;
+        let ingredients = pizza[i].ingredients;
+        let price = pizza[i].price;
         contentRef.innerHTML += getMenuTemplate(name, ingredients, price);
     }
+}
+
+function renderMenuEntrys2() {
+  let contentRef = document.getElementById('cupcakeConten');
+  contentRef.innerHTML = "";
+  for (let i = 0; i < cacke.length; i++) {
+      let name = cacke[i].name;
+      let ingredients = cacke[i].ingredients;
+      let price = cacke[i].price;
+      contentRef.innerHTML += getMenuTemplate(name, ingredients, price);
+  }
 }

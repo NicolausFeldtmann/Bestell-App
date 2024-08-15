@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/dBase.js"></script>
+    <script src="./assets/script/template.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body onload="includeHTML(), renderMenuEntrys2()">
+
+    <header w3-include-html="header.html"></header>
+
     <div class="headSection">
         <div class="headImageSection">
-            <img class="mainImage" src="./assets/img/food-truck.jpg">
+            <img class="mainImg" src="./assets/img/food-truck.jpg">
         </div>
     </div>
+
+    <aside>
+        <h2>Warenkorb</h2>
+    </aside>
 
     <div class="headLine">
         <h1>Super Hero Foodtruck</h1>
@@ -27,5 +38,7 @@
         <h2>Cupcakes!</h2>
         <div class="content" id="cupcakeConten"></div>
     </main>
+
+    <footer w3-include-html="footer.html"></footer>
 </body>
 </html>
