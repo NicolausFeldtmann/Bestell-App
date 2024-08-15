@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+}
+
+.footerContent{
+    background-color: rgb(248, 102, 0);
+    box-shadow: 0 2px 8px #21201826;
+    padding: 0 24px;
+    max-width: 1920px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 80px;
+    padding: 8px;
+}
+
+.fotterLinks{
+    color: white;
+}

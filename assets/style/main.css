@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    font-family: Open Sans;
+}
+
+.headImageSection{
+    height: 300px;
+}
+
+.mainImg{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+main{
+    padding-inline: 16px;
+}
+
+.headLine{
+    padding-inline: 16px;
+}
+
+.menuCard{
+    padding-inline: 16px;
+}
+
+.dish{
+    border: solid rgb(211, 211, 211) 1px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+    margin: 16px;
+    width: 750px;
+}
+
+tr{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+th{
+    padding-bottom: 8px;
+}
+
+.dishIcon{
+    height: 32px;
+    border: solid #e1e1e1 1px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+}
+
+.dishIcon:hover{
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149)inset;
+}
+
+.mainImg{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.name{
+    padding-bottom: 8px;
+    padding-inline: 16px;
+}
+
+aside{
+    padding-inline: 16px;
+    background-color: white;
+    width: 250px;
+    height: 75vh;
+    right: 0;
+    position: fixed;
+    border: solid rgb(211, 211, 211) 1px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+nav{
+    padding-inline: 16px;
+    padding-bottom: 8px;
+    display: flex;
+    gap: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.arrow{
+    height: 32px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
