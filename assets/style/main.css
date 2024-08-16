@@ -97,7 +97,7 @@ aside{
 }
 
 a{
-    color: black;
+    color: black !important;
     text-decoration: none;
 }
 
