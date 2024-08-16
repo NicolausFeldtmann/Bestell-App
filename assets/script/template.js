@@ -1,5 +1,6 @@
 function getMenuTemplate(name, ingredients, price) {
     
+    
     return `
             <div class="dishes">
                 <div class="dish">
@@ -8,7 +9,7 @@ function getMenuTemplate(name, ingredients, price) {
                         <td>${ingredients}</td>
                     </table>
                     <div class="dishInfo">
-                        <div class="price">${price}</div>
+                        <div class="price">${price}€</div>
                         <img class="dishIcon" src="./assets/img/plus.png">
                     </div>
                 </div>

@@ -40,5 +40,6 @@ let cacke = [
     {
         "name": "Buttercup Cupckacke",
         "ingredients": "Dunnkle Schokolade gefüllt mit Erdnussbutter",
+        "price": 6.00,
     }
 ]

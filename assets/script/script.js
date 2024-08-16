@@ -33,6 +33,8 @@ function includeHTML() {
         let name = pizza[i].name;
         let ingredients = pizza[i].ingredients;
         let price = pizza[i].price;
+        price = price.toFixed(2);
+        price = price.replace(".", ",");
         contentRef.innerHTML += getMenuTemplate(name, ingredients, price);
     }
 }
@@ -44,6 +46,8 @@ function renderMenuEntrys2() {
       let name = cacke[i].name;
       let ingredients = cacke[i].ingredients;
       let price = cacke[i].price;
+      price = price.toFixed(2);
+      price = price.replace(".", ",");
       contentRef.innerHTML += getMenuTemplate(name, ingredients, price);
   }
 }
