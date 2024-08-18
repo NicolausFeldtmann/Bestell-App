@@ -51,3 +51,21 @@ function renderMenuEntrys2() {
       contentRef.innerHTML += getMenuTemplate(name, ingredients, price);
   }
 }
+
+function saveLokal() {
+  console.log('save')
+  localStorage.setItem('basket', JSON.stringify(cart));
+}
+
+function addToBasket() {
+  
+
+
+  saveLokal();
+
+}
+
+function showBasket() {
+  var x = document.getElementById('aside');
+  x.classList.toggle('asideShow');
+}

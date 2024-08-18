@@ -1,4 +1,4 @@
-function getMenuTemplate(name, ingredients, price) {
+function getMenuTemplate(name, ingredients, price, idx) {
     
     
     return `
@@ -10,8 +10,15 @@ function getMenuTemplate(name, ingredients, price) {
                     </table>
                     <div class="dishInfo">
                         <div class="price">${price}€</div>
-                        <img class="dishIcon" src="./assets/img/plus.png">
+                        <img class="dishIcon" id="dishIcon" src="./assets/img/plus.png" onclick="addToBasket(${idx})">
                     </div>
                 </div>
+            </div>`;
+}
+
+function getBasketTemplate(idxBasket) {
+    return `<div class="basketPosition">
+                <div class="basketPizza"><b>${pizza[i].name[idx]}</b></div>
+                <div class="basketPrice">${pizza[i].price[idx]}</div>
             </div>`;
 }

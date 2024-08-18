@@ -42,4 +42,7 @@ let cacke = [
         "ingredients": "Dunnkle Schokolade gefüllt mit Erdnussbutter",
         "price": 6.00,
     }
-]
+];
+
+let basket = [];
+
