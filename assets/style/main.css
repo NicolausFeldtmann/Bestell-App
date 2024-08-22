@@ -45,6 +45,7 @@ main{
 
 .dishIcon{
     height: 32px;
+    width: 32px;
     border: solid #e1e1e1 1px;
     border-radius: 5px;
     box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
@@ -85,10 +86,11 @@ th{
 }
 
 aside{
+    top: 112px;
+    bottom: 112px;
     padding-inline: 16px;
     background-color: white;
     width: 250px;
-    height: 75vh;
     right: 0;
     position: fixed;
     border: solid rgb(211, 211, 211) 1px;
@@ -97,6 +99,9 @@ aside{
     visibility: hidden;
     opacity: 0;
     transition: opcaticty 225ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 a{

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/main.css">
-    <script src="./assets/script/script.js"></script>
     <script src="./assets/script/dBase.js"></script>
+    <script src="./assets/script/script.js"></script>
     <script src="./assets/script/template.js"></script>
     <title>Document</title>
 </head>
@@ -20,8 +20,13 @@
         </div>
     </div>
 
-    <aside>
-        <h2>Warenkorb</h2>
+    <aside id="aside">
+        <h2>Warenkorb:</h2>
+        <div class="basket" id="basket">
+            <div class="bill">
+                <h2>Gesammtpreis:</h2>
+            </div>
+        </div>
     </aside>
 
     <div class="headLine">
@@ -36,6 +41,7 @@
     </nav>
 
     <main>
+        <img class="dishImg" src="./assets/img/powerpuff.jpg">
         <h2>Cupcakes!</h2>
         <div class="content" id="cupcakeConten"></div>
     </main>

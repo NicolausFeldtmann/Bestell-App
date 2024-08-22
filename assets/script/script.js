@@ -1,3 +1,9 @@
+function init() {
+  includeHTML();
+  renderMenuEntrys();
+  loadLokal();
+}
+
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     z = document.getElementsByTagName("*");
@@ -21,11 +27,6 @@ function includeHTML() {
     }
   }
 
-  function init() {
-    includeHTML();
-    renderMenuEntrys();
-  }
-
   function renderMenuEntrys() {
     let contentRef = document.getElementById('pizzaContent');
     contentRef.innerHTML = "";
@@ -35,7 +36,7 @@ function includeHTML() {
         let price = pizza[i].price;
         price = price.toFixed(2);
         price = price.replace(".", ",");
-        contentRef.innerHTML += getMenuTemplate(name, ingredients, price);
+        contentRef.innerHTML += getMenuTemplate(name, ingredients, price, i);
     }
 }
 
@@ -53,16 +54,23 @@ function renderMenuEntrys2() {
 }
 
 function saveLokal() {
-  console.log('save')
-  localStorage.setItem('basket', JSON.stringify(cart));
+  localStorage.setItem("basket", JSON.stringify(basket));
 }
 
-function addToBasket() {
+function loadLokal() {
+  JSON.parse(localStorage.getItem("basket"));
+}
+
+function addToBasket(idx) {
+  const item = basket[idx];
+  console.log('st1');
+  let pizza  = document.getElementById(`dish(${idx})`);
+  console.log('st2');
+  basket[idx].push(pizza[idx]);
+  console.log('st3');
   
-
-
+  
   saveLokal();
-
 }
 
 function showBasket() {
