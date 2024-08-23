@@ -1,7 +1,8 @@
 function init() {
   includeHTML();
-  renderMenuEntrys();
   loadLokal();
+  renderMenuEntrys();
+
 }
 
 function includeHTML() {
@@ -53,6 +54,7 @@ function renderMenuEntrys2() {
   }
 }
 
+
 function saveLokal() {
   localStorage.setItem("basket", JSON.stringify(basket));
 }
@@ -61,15 +63,10 @@ function loadLokal() {
   JSON.parse(localStorage.getItem("basket"));
 }
 
-function addToBasket(idx) {
-  const item = basket[idx];
-  console.log('st1');
-  let pizza  = document.getElementById(`dish(${idx})`);
-  console.log('st2');
-  basket[idx].push(pizza[idx]);
-  console.log('st3');
-  
-  
+function addToBasket(idx 0) {
+  const item = pizza[idx];
+  basket.push(item);
+    
   saveLokal();
 }
 
