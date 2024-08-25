@@ -2,6 +2,7 @@ function init() {
   includeHTML();
   loadLokal();
   renderMenuEntrys();
+  renderBasket();
 
 }
 
@@ -54,20 +55,36 @@ function renderMenuEntrys2() {
   }
 }
 
+function renderBasket() {
+  let basketRef = document.getElementById('basket');
+  basketRef.innerHTML = "";
+  for (let j = 0; j < basket.length; j++) {
+    let name = basket[j].name;
+    let price = basket[j].price;
+    price = price.toFixed(2);
+    price = price.replace(".", ",");
+    basketRef.innerHTML += getBasketTemplate(name, price);
+  }
+}
+
 
 function saveLokal() {
   localStorage.setItem("basket", JSON.stringify(basket));
 }
 
-function loadLokal() {
-  JSON.parse(localStorage.getItem("basket"));
+function loadLokal(index) {
+  const item = basket[index];
+  let savedBasket = localStorage.getItem('basket');
+  if (savedBasket) {basket = JSON.parse(savedBasket);
+  }
 }
 
-function addToBasket(idx 0) {
+function addToBasket(idx) {
   const item = pizza[idx];
   basket.push(item);
     
   saveLokal();
+  init();
 }
 
 function showBasket() {
