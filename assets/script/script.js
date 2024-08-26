@@ -63,7 +63,7 @@ function renderBasket() {
     let price = basket[j].price;
     price = price.toFixed(2);
     price = price.replace(".", ",");
-    basketRef.innerHTML += getBasketTemplate(name, price);
+    basketRef.innerHTML += getBasketTemplate(name, price, j);
   }
 }
 
@@ -90,4 +90,11 @@ function addToBasket(idx) {
 function showBasket() {
   var x = document.getElementById('aside');
   x.classList.toggle('asideShow');
+}
+
+function deleteItem(idx) {
+  basket.splice(idx, 1);
+
+  saveLokal();
+  init();
 }

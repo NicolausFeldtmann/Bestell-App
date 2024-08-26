@@ -2,6 +2,12 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 8px;
+    flex-direction: column;
+}
+
+.positionInfo{
+    display: flex;
+    justify-content: space-around;
 }
 
 .basketPrice{
