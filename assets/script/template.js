@@ -15,16 +15,17 @@ function getMenuTemplate(name, ingredients, price, idx) {
             </div>`;
 }
 
-function getBasketTemplate(name, price, j) {
+function getBasketTemplate(name, amount, price, j) {
     return `
         <div class="basketPosition">
                 <div class="basketPizza"><b>${name}</b></div>
                 <div class="positionInfo">
+                    <div class="basketAmount" id="basketAmount">x ${amount}</div>
                     <div class="basketIconArea">
-                        <img class="basketIcon" id="add" src="./assets/img/plus.png" onclick="addItem">
-                        <img class="basketIcon" id="remove" src="./assets/img/minus.png" onclick="removeItem">
+                        <img class="basketIcon" id="add" src="./assets/img/plus.png" onclick="addAmount(0)">
+                        <img class="basketIcon" id="remove" src="./assets/img/minus.png" onclick="removeAmount(0)">
                     </div>
-                    <div class="basketPrice">${price}€</div>
+                    <div class="basketPrice" id="basketPrice">${price}€</div>
                     <img class="basketIcon" id="delete" src="./assets/img/trash-can.png" onclick="deleteItem(${j})">
                 </div>
             </div>`;

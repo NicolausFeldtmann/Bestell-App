@@ -60,10 +60,11 @@ function renderBasket() {
   basketRef.innerHTML = "";
   for (let j = 0; j < basket.length; j++) {
     let name = basket[j].name;
+    let amount = basket[j].amount;
     let price = basket[j].price;
     price = price.toFixed(2);
     price = price.replace(".", ",");
-    basketRef.innerHTML += getBasketTemplate(name, price, j);
+    basketRef.innerHTML += getBasketTemplate(name, amount, price, j);
   }
 }
 
@@ -85,6 +86,29 @@ function addToBasket(idx) {
     
   saveLokal();
   init();
+}
+
+function addAmount(idx) {
+  let constItem = basket[idx];
+  constItem.amount++; 
+
+  saveLokal();
+  renderBasket();
+}
+
+function removeAmount(idx) {
+  let constItem = basket[idx];
+  constItem.amount--;
+  if (constItem.amount  ==0) {
+    basket.splice(idx, 1);
+  }
+
+  saveLokal();
+  renderBasket();
+}
+
+function calculatePrice(idx) {
+
 }
 
 function showBasket() {
