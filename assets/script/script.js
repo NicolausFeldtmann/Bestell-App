@@ -65,6 +65,7 @@ function renderBasket() {
     price = price.toFixed(2);
     price = price.replace(".", ",");
     basketRef.innerHTML += getBasketTemplate(name, amount, price, j);
+    console.log(amount);
   }
 }
 
@@ -82,33 +83,46 @@ function loadLokal(index) {
 
 function addToBasket(idx) {
   const item = pizza[idx];
-  basket.push(item);
-    
+  let basketIndex = basket.findIndex(menu=>{
+    return menu.name == item.name;
+  })
+  if(basketIndex === -1) {
+    basket.push(item);
+  }else{
+    basket[basketIndex]['amount']++
+  }  
   saveLokal();
   init();
 }
 
+
 function addAmount(idx) {
   let constItem = basket[idx];
-  constItem.amount++; 
+  constItem.amount = constItem.amount +1;
+  calculatePrice(constItem);
 
   saveLokal();
   renderBasket();
 }
 
 function removeAmount(idx) {
-  let constItem = basket[idx];
-  constItem.amount--;
-  if (constItem.amount  ==0) {
+  let basketItem = basket[idx];
+  basketItem.amount--;
+  calculatePrice(basketItem);
+  if (basketItem.amount  ==0) {
     basket.splice(idx, 1);
   }
+  console.log('remove');
 
   saveLokal();
   renderBasket();
 }
 
-function calculatePrice(idx) {
-
+function calculatePrice(basketItem) {
+  let item = pizza.find(x => {
+    return x.name == basketItem.name
+  });
+  basketItem.price = item.price * basketItem.amount; 
 }
 
 function showBasket() {

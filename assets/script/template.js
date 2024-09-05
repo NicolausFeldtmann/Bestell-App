@@ -22,8 +22,8 @@ function getBasketTemplate(name, amount, price, j) {
                 <div class="positionInfo">
                     <div class="basketAmount" id="basketAmount">x ${amount}</div>
                     <div class="basketIconArea">
-                        <img class="basketIcon" id="add" src="./assets/img/plus.png" onclick="addAmount(0)">
-                        <img class="basketIcon" id="remove" src="./assets/img/minus.png" onclick="removeAmount(0)">
+                        <img class="basketIcon" id="add" src="./assets/img/plus.png" onclick="addAmount(${j})">
+                        <img class="basketIcon" id="remove" src="./assets/img/minus.png" onclick="removeAmount(${j})">
                     </div>
                     <div class="basketPrice" id="basketPrice">${price}€</div>
                     <img class="basketIcon" id="delete" src="./assets/img/trash-can.png" onclick="deleteItem(${j})">

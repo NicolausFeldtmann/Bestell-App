@@ -101,7 +101,11 @@ aside{
     transition: opcaticty 225ms ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+
+.checkout{
+    display: flex;
+    flex-direction: column;
 }
 
 .trBasket{

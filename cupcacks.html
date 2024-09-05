@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <script src="./assets/script/dBase.js"></script>
     <script src="./assets/script/script.js"></script>
     <script src="./assets/script/template.js"></script>
-    <title>Document</title>
+    <title>Bestell App</title>
 </head>
 <body onload="includeHTML(), renderMenuEntrys2(), loadLokal(), renderBasket()">
 
@@ -24,15 +24,27 @@
 
     <aside id="aside">
         <h2>Warenkorb:</h2>
-        <div class="basket" id="basket"></div>
-        <div class="bill">
-            <h2>Gesammtpreis:</h2>
-        </div>
+            <div class="checkout">
+                <div class="basket" id="basket"></div>
+                <div class="bill">
+                    <table class="billCalcu">
+                        <tr class="trBasket">
+                            <td class="billItem">Zwischensumme:</td>
+                            <td class="billPositions" id="toPay">100€</td>
+                        </tr>
+                        <tr class="trBasket">
+                            <td class="billItem">Liefergebühr:</td>
+                            <td class="billPositions" id="deliveryFee">5,00€</td>
+                        </tr>
+                    </table>
+                    <h2>Gesammtpreis:</h2>
+                </div>
+            </div>
     </aside>
 
     <div class="headLine">
         <h1>Super Hero Foodtruck</h1>
-        <p>Bwertung (4,7 von 5 Sternen)</p>
+        <p>Bewertung (4,7 von 5 Sternen)</p>
     </div>
 
     <nav>
