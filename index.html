@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/main.css">
     <link rel="stylesheet" href="./assets/style/basket.css">
+    <link rel="stylesheet" href="./assets/style/mobile.css">
     <script src="./assets/script/dBase.js"></script>
     <script src="./assets/script/script.js"></script>
     <script src="./assets/script/template.js"></script>
@@ -29,14 +30,14 @@
             <table class="billCalcu">
                 <tr class="trBasket">
                     <td class="billItem">Zwischensumme:</td>
-                    <td class="billPositions" id="toPay">100€</td>
+                    <td class="billPositions" id="toPay"></td>
                 </tr>
                 <tr class="trBasket">
                     <td class="billItem">Liefergebühr:</td>
                     <td class="billPositions" id="deliveryFee">5,00€</td>
                 </tr>
             </table>
-            <h2>Gesammtpreis:</h2>
+            <h2 id="priceTotal">Gesammtpreis:</h2>
         </div>
     </aside>
 

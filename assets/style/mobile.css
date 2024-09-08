@@ -1,0 +1,48 @@
+@media(max-width: 800px) {
+    .content{
+        flex-direction: row;
+    }
+    
+    .dish{
+        width: 400px;
+        padding: 12px;
+    }
+
+    tr{
+        width: auto;
+    }
+
+}
+
+@media(max-width: 470px) {
+    .logo{
+        height: 48px;
+    }
+
+    .headerIcon{
+        height: 24px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .dish{
+        width: 148px;
+        font-size: 14px;
+    }
+
+    .dishInfo{
+        padding-inline: 8px;
+    }
+
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerLinks{
+        padding-bottom: 8px;
+    }
+}

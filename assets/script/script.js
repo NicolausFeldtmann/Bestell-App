@@ -38,7 +38,7 @@ function includeHTML() {
         let price = pizza[i].price;
         price = price.toFixed(2);
         price = price.replace(".", ",");
-        contentRef.innerHTML += getMenuTemplate(name, ingredients, price, i);
+        contentRef.innerHTML += getMenuTemplate(name, ingredients, price, i, 'pizza');
     }
 }
 
@@ -51,7 +51,7 @@ function renderMenuEntrys2() {
       let price = cacke[i].price;
       price = price.toFixed(2);
       price = price.replace(".", ",");
-      contentRef.innerHTML += getMenuTemplate(name, ingredients, price);
+      contentRef.innerHTML += getMenuTemplate(name, ingredients, price, i, 'cacke');
   }
 }
 
@@ -61,12 +61,15 @@ function renderBasket() {
   for (let j = 0; j < basket.length; j++) {
     let name = basket[j].name;
     let amount = basket[j].amount;
+    calculatePrice(basket[j]);
     let price = basket[j].price;
     price = price.toFixed(2);
     price = price.replace(".", ",");
     basketRef.innerHTML += getBasketTemplate(name, amount, price, j);
     console.log(amount);
   }
+  calculatePrice();
+  calculateTotalPrice();
 }
 
 
@@ -81,8 +84,14 @@ function loadLokal(index) {
   }
 }
 
-function addToBasket(idx) {
-  const item = pizza[idx];
+function addToBasket(idx, type) {
+  let item = pizza[idx];
+  if (type == pizza) {
+    item = pizza[idx];
+  } else  {
+   item = cacke[idx];
+  }
+
   let basketIndex = basket.findIndex(menu=>{
     return menu.name == item.name;
   })
@@ -92,14 +101,15 @@ function addToBasket(idx) {
     basket[basketIndex]['amount']++
   }  
   saveLokal();
-  init();
+  loadLokal();
+  renderBasket();
 }
 
 
 function addAmount(idx) {
   let constItem = basket[idx];
   constItem.amount = constItem.amount +1;
-  calculatePrice(constItem);
+ 
 
   saveLokal();
   renderBasket();
@@ -108,7 +118,6 @@ function addAmount(idx) {
 function removeAmount(idx) {
   let basketItem = basket[idx];
   basketItem.amount--;
-  calculatePrice(basketItem);
   if (basketItem.amount  ==0) {
     basket.splice(idx, 1);
   }
@@ -122,7 +131,22 @@ function calculatePrice(basketItem) {
   let item = pizza.find(x => {
     return x.name == basketItem.name
   });
+  
   basketItem.price = item.price * basketItem.amount; 
+}
+
+function calculateTotalPrice(basketIndex) {
+  let basketItem = basket[basketIndex];
+  let positionPriceTotal = document.getElementById(`${basketIndex}positionPriceTotal`);
+  let positionPriceTotalValue = basketItem.amount * basketItem.price;
+  positionPriceTotal.innerHTML = positionPriceTotalValue.toFixed(2).replace('.', ',') + '€';
+}
+
+function showTotalPrice() {
+  let priceTotal = document.getElementById('toPay');
+  let toPayValue = positionPriceTotalValue;
+
+  priceTotal.innerHTML = toPayValue.toFixed(2).replace('.', ',') + '€';
 }
 
 function showBasket() {
