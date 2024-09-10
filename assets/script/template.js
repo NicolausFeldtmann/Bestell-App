@@ -9,7 +9,7 @@ function getMenuTemplate(name, ingredients, price, idx, type) {
                     </table>
                     <div class="dishInfo">
                         <div class="price" id="price">${price}€</div>
-                        <img class="dishIcon" id="dishIcon" src="./assets/img/plus.png" onclick="addToBasket(${idx}, ${type})">
+                        <img class="dishIcon" id="dishIcon" src="./assets/img/plus.png" onclick="addToBasket(${idx})">
                     </div>
                 </div>
             </div>`;

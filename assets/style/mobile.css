@@ -29,7 +29,7 @@
     }
     
     .dish{
-        width: 148px;
+        width: 188px;
         font-size: 14px;
     }
 
@@ -44,5 +44,9 @@
 
     .footerLinks{
         padding-bottom: 8px;
+    }
+
+    aside{
+        width: -webkit-fill-available;
     }
 }

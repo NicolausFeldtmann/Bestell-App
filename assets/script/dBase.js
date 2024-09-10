@@ -1,5 +1,5 @@
 let basket = [];
-let pizza = [
+let card = [
     {
         "name": "Leonardo",
         "ingredients": "Leckere Deepdish Pizza!<br> Mit Bananen und Würstechen.<br> Auch vegan erhältlich!",
@@ -26,10 +26,8 @@ let pizza = [
         "ingredients": "Mit leckerem Käse im Rand!<br> Eingelegt Sardellen und schmelzender Karamell.<br> Ein gute kombination aus süß und Salzig!",
         "price": 15.50,
         "amount": 1,
-    }
-];
+    },
 
-let cacke = [
     {
         "name": "Blossmom Cupckacke",
         "ingredients": "Mit Orangenmarmalede gefüllter Cupckacke Überzogen mit Orangenem Zuckerguss Bestreut mit Schockoperlen",
