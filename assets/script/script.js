@@ -28,6 +28,7 @@ function includeHTML() {
       }
     }
   }
+// render fuctions
 
   function renderMenuEntrys() {
     let contentRef = document.getElementById('pizzaContent');
@@ -45,13 +46,26 @@ function includeHTML() {
 function renderMenuEntrys2() {
   let contentRef = document.getElementById('cupcakeConten');
   contentRef.innerHTML = "";
-  for (let i = 4; i < card.length; i++) {
+  for (let i = 4; i < 7; i++) {
       let name = card[i].name;
       let ingredients = card[i].ingredients;
       let price = card[i].price;
       price = price.toFixed(2);
       price = price.replace(".", ",");
       contentRef.innerHTML += getMenuTemplate(name, ingredients, price, i, 'cake');
+  }
+}
+
+function renderMenuEntrys3() {
+  let contentRef = document.getElementById('burgerConten');
+  contentRef.innerHTML = "";
+  for (let i = 7; i < 11; i++) {
+      let name = card[i].name;
+      let ingredients = card[i].ingredients;
+      let price = card[i].price;
+      price = price.toFixed(2);
+      price = price.replace(".", ",");
+      contentRef.innerHTML += getMenuTemplate(name, ingredients, price, i, 'burger');
   }
 }
 
@@ -71,7 +85,7 @@ function renderBasket() {
   calculateTotalPrice();
 }
 
-
+//interact local storage
 function saveLokal() {
   localStorage.setItem("basket", JSON.stringify(basket));
 }
@@ -83,6 +97,7 @@ function loadLokal(index) {
   }
 }
 
+//add to Basket functions
 function addToBasket(idx) {
   let item = card[idx];
 
@@ -138,15 +153,14 @@ function calculateTotalPrice(basketItem) {
   basketItemPrice = item.price * basketItem.amount;
 }
 
-
-function showBasket() {
-  var x = document.getElementById('aside');
-  x.classList.toggle('asideShow');
-}
-
 function deleteItem(idx) {
   basket.splice(idx, 1);
 
   saveLokal();
   renderBasket();
+}
+
+function showBasket() {
+  var x = document.getElementById('aside');
+  x.classList.toggle('asideShow');
 }

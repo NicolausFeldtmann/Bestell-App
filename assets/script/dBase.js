@@ -1,5 +1,6 @@
 let basket = [];
 let card = [
+    //PizzaMenuCard
     {
         "name": "Leonardo",
         "ingredients": "Leckere Deepdish Pizza!<br> Mit Bananen und Würstechen.<br> Auch vegan erhältlich!",
@@ -27,27 +28,55 @@ let card = [
         "price": 15.50,
         "amount": 1,
     },
-
+//CupcakeMenuCard
     {
-        "name": "Blossmom Cupckacke",
+        "name": "Blossmom Cupcake",
         "ingredients": "Mit Orangenmarmalede gefüllter Cupckacke Überzogen mit Orangenem Zuckerguss Bestreut mit Schockoperlen",
         "price": 5.00,
         "amount": 1,
     },
 
     {
-        "name": "Bubbles Cupckacke",
+        "name": "Bubbles Cupcake",
         "ingredients": "Überzogen mit blauem Zuckerguss gefüllt mit flüssigem Vanille Kern mit Knusperperlen",
         "price": 5.50,
         "amount": 1,
     },
 
     {
-        "name": "Buttercup Cupckacke",
+        "name": "Buttercup Cupcake",
         "ingredients": "Dunnkle Schokolade gefüllt mit Erdnussbutter",
         "price": 6.00,
         "amount": 1,
-    }
+    },
+//BurgerMenuCard
+    {
+        "name": "Krabben Burger",
+        "ingredients": "Bester Burger der sieben Weltmeere!<br> Belegt mit doppelt Patty, doppelt Käse<br> mit Tomatenscheibe, Salat und Liebe!",
+        "price": 9.95,
+        "amount":1,
+    },
+
+    {
+        "name": "Mr. Krabs Ruhestands Burger",
+        "ingredients": "Klassischer Krabbenburger mit zusätlichen Krebsfleich im Patty,<br> mit leicher Zitronensauce!",
+        "price": 12.50,
+        "amount":1,
+    },
+
+    {
+        "name": "Tadeus Burger",
+        "ingredients": "Klassicher Krabbenburger mit frietierten Tintenfischringen,<br> mit delikater Cocktailsauce!",
+        "price": 13.90,
+        "amount":1,
+    },
+
+    {
+        "name": "Plankton Burger",
+        "ingredients": "Klassicher Krabbenburger, mit veganem Algen Patty!",
+        "price": 11.25,
+        "amount":1,
+    },
 ];
 
 

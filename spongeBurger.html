@@ -13,7 +13,7 @@
     <script src="./assets/script/template.js"></script>
     <title>Bestell App</title>
 </head>
-<body onload="init()">
+<body onload="includeHTML(), renderMenuEntrys3(), loadLokal(), renderBasket()">
 
     <header w3-include-html="header.html"></header>
 
@@ -25,21 +25,22 @@
 
     <aside id="aside">
         <h2>Warenkorb:</h2>
-        <div class="basket" id="basket"></div>
-        <div class="bill">
-            <table class="billCalcu">
-                <tr class="trBasket">
-                    <td class="billItem">Zwischensumme:</td>
-                    <td class="billPositions" id="toPay"></td>
-                </tr>
-                <tr class="trBasket">
-                    <td class="billItem">Liefergebühr:</td>
-                    <td class="billPositions" id="deliveryFee">5,00€</td>
-                </tr>
-            </table>
-            <h2>Gesammtpreis:</h2>
-            <div id="priceTotal"></div>
-        </div>
+            <div class="checkout">
+                <div class="basket" id="basket"></div>
+                <div class="bill">
+                    <table class="billCalcu">
+                        <tr class="trBasket">
+                            <td class="billItem">Zwischensumme:</td>
+                            <td class="billPositions" id="toPay">100€</td>
+                        </tr>
+                        <tr class="trBasket">
+                            <td class="billItem">Liefergebühr:</td>
+                            <td class="billPositions" id="deliveryFee">5,00€</td>
+                        </tr>
+                    </table>
+                    <h2>Gesammtpreis:</h2>
+                </div>
+            </div>
     </aside>
 
     <div class="headLine">
@@ -48,17 +49,16 @@
     </div>
 
     <nav>
-        <a class="cardLink" href="#">Turtle Pizza!</a>
-        <a class="cardLink" href="spongeBurger.html">Sponge Burger!</a>
+        <a class="cardLink" href="index.html">Trutle Pizza!</a>
+        <a class="cardLink" href="#">Sponge Burger!</a>
         <a class="cardLink" href="cupcaks.html">Power Puff Cupcakes!</a>
 
     </nav>
 
     <main>
-        <img class="dishImg" src="./assets/img/turtels.jpg">
-        <h2>Pizzen!</h2>
-
-        <div class="content" id="pizzaContent"></div>
+        <img class="dishImg" src="./assets/img/burger.png">
+        <h2>Krebben Burger!</h2>
+        <div class="content" id="burgerConten"></div>
     </main>
 
     <footer w3-include-html="footer.html"></footer>
