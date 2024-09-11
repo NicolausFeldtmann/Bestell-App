@@ -77,6 +77,69 @@ let card = [
         "price": 11.25,
         "amount":1,
     },
+//DrinksMenucard
+    {
+        "name": "Cola",
+        "ingredients": "Kofeinhaltig",
+        "pürice": 2.50,
+        "amount":1,
+    },
+
+    {
+        "name": "Cola Zerrrro!",
+        "ingredients": "Kofeinhaltig, ohne Zucker",
+        "pürice": 2.50,
+        "amount":1,
+    },
+
+    {
+        "name": "Fanta",
+        "ingredients": "Orangenlimonade",
+        "pürice": 2.50,
+        "amount":1,
+    },
+
+    {
+        "name": "Spirte",
+        "ingredients": "Zitronenlimonade",
+        "pürice": 2.50,
+        "amount":1,
+    },
+
+    {
+        "name": "Spirte",
+        "ingredients": "Zitronenlimonade",
+        "pürice": 2.50,
+        "amount":1,
+    },
+
+    {
+        "name": "Bonqua",
+        "ingredients": "Mineralwasser mit Kohlensäure",
+        "pürice": 2.50,
+        "amount":1,
+    },
+
+    {
+        "name": "Erdbeeshake",
+        "ingredients": "Milkshacke mit Erdbeergeschmack",
+        "pürice": 4.95,
+        "amount":1,
+    },
+
+    {
+        "name": "Vanilleshake",
+        "ingredients": "Milkshake mit Vanillegeschmack",
+        "pürice": 4.95,
+        "amount":1,
+    },
+
+    {
+        "name": "Schokoshake",
+        "ingredients": "Milkshake mit Schokoladengeschmack",
+        "pürice": 4.95,
+        "amount":1,
+    },
 ];
 
 

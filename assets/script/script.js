@@ -44,7 +44,7 @@ function includeHTML() {
 }
 
 function renderMenuEntrys2() {
-  let contentRef = document.getElementById('cupcakeConten');
+  let contentRef = document.getElementById('cupcakeContent');
   contentRef.innerHTML = "";
   for (let i = 4; i < 7; i++) {
       let name = card[i].name;
@@ -57,7 +57,7 @@ function renderMenuEntrys2() {
 }
 
 function renderMenuEntrys3() {
-  let contentRef = document.getElementById('burgerConten');
+  let contentRef = document.getElementById('burgerContent');
   contentRef.innerHTML = "";
   for (let i = 7; i < 11; i++) {
       let name = card[i].name;
@@ -66,6 +66,19 @@ function renderMenuEntrys3() {
       price = price.toFixed(2);
       price = price.replace(".", ",");
       contentRef.innerHTML += getMenuTemplate(name, ingredients, price, i, 'burger');
+  }
+}
+
+function renderMenuEntrys4() {
+  let contentRef = document.getElementById('drinksContent');
+  contentRef.innerHTML = "";
+  for (let i = 11; i < 20; i++) {
+      let name = card[i].name;
+      let ingredients = card[i].ingredients;
+      let price = card[i].price;
+      price = price.toFixed(2);
+      price = price.replace(".", ",");
+      contentRef.innerHTML += getMenuTemplate(name, ingredients, price, i, 'drinks');
   }
 }
 
