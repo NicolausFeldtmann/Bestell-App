@@ -155,15 +155,16 @@ function calculatePrice(basketItem) {
   });
   
   basketItem.price = item.price * basketItem.amount; 
+
+  calculateTotalPrice();
 }
 
-function calculateTotalPrice(basketItem) {
-  let basketItemPrice = document.getElementById('toPay');
-  let item = basket.find(x => {
-    return x.name == basketItem.name
-  });
-
-  basketItemPrice = item.price * basketItem.amount;
+function calculateTotalPrice() {
+  const totalPrice = basket.map((product) => product.price).reduce((acc, curr) => acc + curr)
+  console.log(totalPrice);
+  //totalPrice.toFixed(2);
+  //totalPrice = totalPrice.replace(".", ",");
+  document.getElementById('toPay').innerHTML = totalPrice + '€';
 }
 
 function deleteItem(idx) {
