@@ -72,7 +72,7 @@ function renderMenuEntrys3() {
 function renderMenuEntrys4() {
   let contentRef = document.getElementById('drinksContent');
   contentRef.innerHTML = "";
-  for (let i = 11; i < 20; i++) {
+  for (let i = 11; i < 19; i++) {
       let name = card[i].name;
       let ingredients = card[i].ingredients;
       let price = card[i].price;

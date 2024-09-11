@@ -77,68 +77,61 @@ let card = [
         "price": 11.25,
         "amount":1,
     },
-//DrinksMenucard
+//drinksMenuCard
     {
         "name": "Cola",
-        "ingredients": "Kofeinhaltig",
-        "pürice": 2.50,
-        "amount":1,
+        "ingredients": "Kofeinhaltiges Erfrischunggetränk",
+        "price": 2.25,
+        "amount":1,  
     },
 
     {
         "name": "Cola Zerrrro!",
-        "ingredients": "Kofeinhaltig, ohne Zucker",
-        "pürice": 2.50,
-        "amount":1,
+        "ingredients": "Kofeinhaltiges Erfrischunggetränk ohne Zucker",
+        "price": 2.25,
+        "amount":1,  
     },
 
     {
         "name": "Fanta",
-        "ingredients": "Orangenlimonade",
-        "pürice": 2.50,
-        "amount":1,
+        "ingredients": "Limonade mit Orangengeschmack",
+        "price": 2.25,
+        "amount":1,  
     },
 
     {
-        "name": "Spirte",
-        "ingredients": "Zitronenlimonade",
-        "pürice": 2.50,
-        "amount":1,
+        "name": "Sprite",
+        "ingredients": "Limonade mit Zitrusgeschmack",
+        "price": 2.25,
+        "amount":1,  
     },
 
     {
-        "name": "Spirte",
-        "ingredients": "Zitronenlimonade",
-        "pürice": 2.50,
-        "amount":1,
-    },
-
-    {
-        "name": "Bonqua",
+        "name": "Bonqaqua",
         "ingredients": "Mineralwasser mit Kohlensäure",
-        "pürice": 2.50,
-        "amount":1,
-    },
-
-    {
-        "name": "Erdbeeshake",
-        "ingredients": "Milkshacke mit Erdbeergeschmack",
-        "pürice": 4.95,
-        "amount":1,
+        "price": 2.25,
+        "amount":1,  
     },
 
     {
         "name": "Vanilleshake",
-        "ingredients": "Milkshake mit Vanillegeschmack",
-        "pürice": 4.95,
-        "amount":1,
+        "ingredients": "Milkshake mit Vanilleeis",
+        "price": 4.50,
+        "amount":1,  
+    },
+
+    {
+        "name": "Erdbeershacke",
+        "ingredients": "Milkshake mit Erdbeereis",
+        "price": 4.75,
+        "amount":1,  
     },
 
     {
         "name": "Schokoshake",
-        "ingredients": "Milkshake mit Schokoladengeschmack",
-        "pürice": 4.95,
-        "amount":1,
+        "ingredients": "Milkshake mit Schokoladeneis",
+        "price": 4.75,
+        "amount":1,  
     },
 ];
 

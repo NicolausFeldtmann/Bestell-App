@@ -1,4 +1,4 @@
-function getMenuTemplate(name, ingredients, price, idx, type) {
+function getMenuTemplate(name, ingredients, price, idx) {
     
     return `
             <div class="dishes">
