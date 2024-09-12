@@ -64,3 +64,17 @@
     text-decoration: underline;
     padding-bottom: 8px;
 }
+
+.fullCharge{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.toCharge{
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(248, 102, 0);
+    text-decoration: underline;
+    padding-bottom: 8px; 
+}

@@ -94,6 +94,7 @@ function renderBasket() {
     price = price.replace(".", ",");
     basketRef.innerHTML += getBasketTemplate(name, amount, price, j);
   }
+
   calculatePrice();
   calculateTotalPrice();
 }
@@ -157,18 +158,33 @@ function calculatePrice(basketItem) {
   basketItem.price = item.price * basketItem.amount; 
 
   calculateTotalPrice();
+  calculateTotal();
 }
 
 function calculateTotalPrice() {
   const totalPrice = basket.map((product) => product.price).reduce((acc, curr) => acc + curr)
   console.log(totalPrice);
-  //totalPrice.toFixed(2);
-  //totalPrice = totalPrice.replace(".", ",");
-  document.getElementById('toPay').innerHTML = totalPrice + '€';
+  let formattedPrice = totalPrice;
+  formattedPrice = formattedPrice.toFixed(2);
+  formattedPrice = formattedPrice.replace('.', ',');
+  document.getElementById('toPay').innerHTML = formattedPrice + '€';
+}
+
+function calculateTotal() {
+  const totalPrice = basket.map((product) => product.price).reduce((acc, curr) => acc + curr)
+  if (totalPrice < 21) {
+    priceToPay = totalPrice + 5;
+  } else {
+    priceToPay = totalPrice;
+  }
+  priceToPay = priceToPay.toFixed(2);
+  priceToPay = priceToPay.replace('.', ',');
+  document.getElementById('priceTotal').innerHTML = priceToPay + '€';
 }
 
 function deleteItem(idx) {
   basket.splice(idx, 1);
+
 
   saveLokal();
   renderBasket();
