@@ -94,8 +94,6 @@ function renderBasket() {
     price = price.replace(".", ",");
     basketRef.innerHTML += getBasketTemplate(name, amount, price, j);
   }
-
-  calculatePrice();
   calculateTotalPrice();
 }
 
@@ -128,7 +126,6 @@ function addToBasket(idx) {
   renderBasket();
 }
 
-
 function addAmount(idx) {
   let constItem = basket[idx];
   constItem.amount = constItem.amount +1;
@@ -144,8 +141,7 @@ function removeAmount(idx) {
   if (basketItem.amount  ==0) {
     basket.splice(idx, 1);
   }
-  console.log('remove');
-
+  calculatePrice(basketItem);
   saveLokal();
   renderBasket();
 }
@@ -162,8 +158,12 @@ function calculatePrice(basketItem) {
 }
 
 function calculateTotalPrice() {
-  const totalPrice = basket.map((product) => product.price).reduce((acc, curr) => acc + curr)
-  console.log(totalPrice);
+  let totalPrice;
+  if (basket.length == 0) {
+    totalPrice = 0;
+  } else {
+  totalPrice = basket.map((product) => product.price).reduce((acc, curr) => acc + curr)
+  }
   let formattedPrice = totalPrice;
   formattedPrice = formattedPrice.toFixed(2);
   formattedPrice = formattedPrice.replace('.', ',');
@@ -171,7 +171,12 @@ function calculateTotalPrice() {
 }
 
 function calculateTotal() {
-  const totalPrice = basket.map((product) => product.price).reduce((acc, curr) => acc + curr)
+  let totalPrice;
+  if (basket.length == 0) {
+    totalPrice = 0;
+  } else {
+  totalPrice = basket.map((product) => product.price).reduce((acc, curr) => acc + curr)
+  }
   if (totalPrice < 26) {
     priceToPay = totalPrice + 5;
   } else {
@@ -186,6 +191,7 @@ function deleteItem(idx) {
   basket.splice(idx, 1);
 
   saveLokal();
+  calculateTotal();
   renderBasket();
 }
 
