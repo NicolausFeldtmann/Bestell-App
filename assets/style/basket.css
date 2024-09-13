@@ -1,3 +1,24 @@
+.asideNav{
+    margin-top: 16px;
+    display: flex;
+    justify-content: end;
+}
+
+.basketClose{
+    height: 32px;
+    width: 32px;
+    padding: 2px;
+    border: solid rgb(248, 102, 0) 1px;
+    border-radius: 5px;
+    background-color: rgb(248, 102, 0);
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+}
+
+.basketClose:hover{
+    cursor: pointer;
+    box-shadow:inset 0 1px 2px 0 rgba(60, 64, 67, 0.302),inset 0 2px 6px 2px rgba(60, 64, 67, 0.302);
+}
+
 .basketPosition{
     display: flex;
     justify-content: space-between;
@@ -38,6 +59,7 @@
 .checkout{
     display: flex;
     flex-direction: column;
+    
 }
 
 .trBasket{
@@ -77,4 +99,23 @@
     color: rgb(248, 102, 0);
     text-decoration: underline;
     padding-bottom: 8px; 
+}
+
+.detail{
+    font-size: 12px;
+}
+
+.order{
+    font-size: 32px;
+    background-color:rgb(248, 102, 0);
+    color: white;
+    border: 1px solid rgb(248, 102, 0);
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 16px;
+}
+
+.order:hover{
+    cursor: pointer;
+    box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
 }

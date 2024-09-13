@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./assets/style/main.css">
     <link rel="stylesheet" href="./assets/style/basket.css">
     <link rel="stylesheet" href="./assets/style/mobile.css">
-    <script src="./assets/script/dBase.js"></script>
-    <script src="./assets/script/script.js"></script>
-    <script src="./assets/script/template.js"></script>
+    <script src="./script/dBase.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/template.js"></script>
     <title>Bestell App</title>
 </head>
 <body onload="includeHTML(), renderMenuEntrys3(), loadLokal(), renderBasket()">
@@ -24,6 +24,9 @@
     </div>
 
     <aside id="aside">
+        <div class="asideNav">
+            <img class="basketClose" onclick="showBasket()" src="./assets/img/x.png.png">
+        </div>
         <h2>Warenkorb:</h2>
             <div class="checkout">
                 <div class="basket" id="basket"></div>
@@ -31,15 +34,20 @@
                     <table class="billCalcu">
                         <tr class="trBasket">
                             <td class="billItem">Zwischensumme:</td>
-                            <td class="billPositions" id="toPay">100€</td>
+                            <td class="billPositions" id="toPay"></td>
                         </tr>
                         <tr class="trBasket">
                             <td class="billItem">Liefergebühr:</td>
                             <td class="billPositions" id="deliveryFee">5,00€</td>
                         </tr>
                     </table>
-                    <h2>Gesammtpreis:</h2>
+                    <p class="detail">Bei einem Bestellwert von unter <b>25,00€</b> fallen leider <b>5,00€</b> Liefergebühr an.</p>
+                    <div class="fullCharge">
+                        <h2>Gesammtpreis:</h2>
+                        <div class="toCharge" id="priceTotal"></div>
+                    </div>
                 </div>
+                <button class="order" onclick="order()">Bestellen!</button>
             </div>
     </aside>
 

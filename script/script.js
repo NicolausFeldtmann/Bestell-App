@@ -172,7 +172,7 @@ function calculateTotalPrice() {
 
 function calculateTotal() {
   const totalPrice = basket.map((product) => product.price).reduce((acc, curr) => acc + curr)
-  if (totalPrice < 21) {
+  if (totalPrice < 26) {
     priceToPay = totalPrice + 5;
   } else {
     priceToPay = totalPrice;
@@ -185,7 +185,6 @@ function calculateTotal() {
 function deleteItem(idx) {
   basket.splice(idx, 1);
 
-
   saveLokal();
   renderBasket();
 }
@@ -193,4 +192,12 @@ function deleteItem(idx) {
 function showBasket() {
   var x = document.getElementById('aside');
   x.classList.toggle('asideShow');
+}
+
+function order() {
+  if (basket.length < 1) {
+    alert('Korb noch leer!')
+  } else {
+    alert('Aber das ist doch alles nicht echt!')
+  }
 }
