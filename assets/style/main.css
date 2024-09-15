@@ -111,8 +111,8 @@ td{
 }
 
 aside{
-    top: 112px;
-    bottom: 112px;
+    top: 0px;
+    bottom: 0px;
     padding-inline: 16px;
     background-color: white;
     width: 300px;
