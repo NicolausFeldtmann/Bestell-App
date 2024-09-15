@@ -21,6 +21,27 @@ main{
     padding-inline: 16px;
 }
 
+.rating{
+    display: flex;
+    align-items: center;
+}
+
+.pRating{
+    font-size: 24px;
+}
+
+.starBar{
+    padding-inline: 16px;
+}
+
+.star{
+    height: 28px;
+}
+
+.star:hover{
+    cursor: pointer;
+}
+
 .menuCard{
     padding-inline: 16px;
 }

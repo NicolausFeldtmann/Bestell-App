@@ -195,6 +195,14 @@ function deleteItem(idx) {
   renderBasket();
 }
 
+function deleteAll(index) {
+  basket.splice(index);
+
+  saveLokal();
+  calculateTotal();
+  renderBasket();
+}
+
 function showBasket() {
   var x = document.getElementById('aside');
   x.classList.toggle('asideShow');
@@ -204,6 +212,7 @@ function order() {
   if (basket.length < 1) {
     alert('Korb noch leer!')
   } else {
+    deleteAll();
     alert('Aber das ist doch alles nicht echt!')
   }
 }
